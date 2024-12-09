@@ -8,7 +8,7 @@ const Dashboard = () => {
     <div className="min-h-screen flex items-center justify-center">
       <div>
         <h1 className="text-2xl">Welcome, {session?.user?.username}!</h1>
-        <p>Your email: {session?.user?.email}</p>
+        <p>Your email: {session?.user?.last_name}</p>
       </div>
     </div>
   );

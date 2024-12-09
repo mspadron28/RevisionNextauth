@@ -16,7 +16,11 @@ const Login = () => {
       redirect: false,
       callbackUrl: "/dashboard",
     });
-    if (!res?.ok) setError("Invalid credentials");
+    if (res?.ok) {
+      window.location.href = res.url || "/dashboard"; 
+    } else {
+      setError("Invalid credentials");
+    }
   };
 
   return (
